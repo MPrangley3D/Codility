@@ -1,0 +1,20 @@
+using System;
+
+class Solution 
+{
+    public int solution(int[] A) 
+    {
+        int smallestPositive = 1;
+        Array.Sort(A);
+        
+        foreach(int item in A)
+        {
+            if (item == smallestPositive)
+            {
+                smallestPositive++;
+            }
+        }
+        
+        return smallestPositive;
+    }
+}
